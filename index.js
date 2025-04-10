@@ -1,11 +1,12 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
+
+const PORT = process.env.PORT || 8080;
 
 app.get('/', (req, res) => {
-  res.send('🚀 JJPRO Alert Engine is LIVE!');
+  res.send('Alert engine is live!');
 });
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
